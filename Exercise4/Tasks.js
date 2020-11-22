@@ -99,10 +99,12 @@ class CashMethod extends PaymentMethod
         this.addToAmount = function(money)
         {
             amount +=money;
+            return this;
         }
         this.reduceFromAmount = function(money)
         {
             amount -=money;
+            return this;
         }
         this.getMoney = function()
         {
@@ -127,10 +129,12 @@ class CreditMethod extends PaymentMethod
         this.addToAmount = function(money)
         {
             amount +=(money*percentage)/100;
+            return this;
         }
         this.reduceFromAmount = function(money)
         {
             amount -=money;
+            return this;
         }
         this.getMoney = function()
         {
@@ -148,6 +152,7 @@ class CreditMethod extends PaymentMethod
 const cashAccount = new CashMethod();
 cashAccount.getAmount(); // returns “Your amount in the account is: 0”
 cashAccount.addToAmount(100); // returns cashAccount instance (useful for method chaining)
+cashAccount.addToAmount(20).addToAmount(30).reduceFromAmount(10);
 cashAccount.getAmount(); // returns “Your amount in the account is: 140”
 
 const creditAccount = new CreditMethod();
