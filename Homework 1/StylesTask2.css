@@ -1,0 +1,144 @@
+* 
+{
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
+    background-attachment:fixed;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container
+{
+    
+    max-width: 32rem;
+    width: 90%;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 7px;
+    box-sizing: border-box; 
+    padding: 2.5rem;
+}
+
+.container h1
+{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.container h2
+{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    font-size: 19px;
+    color: #a7a7b2;
+    padding-top: 10px;
+}
+
+.container .loginForm
+{
+    margin-top: 50px;
+}
+
+.loginForm #email, #pass, #username
+{
+    width: 98%;
+    height: 30px;
+}
+
+.loginForm #pass, #email
+{
+    margin-top: 12px;
+}
+
+#email, #pass, #username
+{   
+    border:none;
+    border-bottom: 2px solid #a7a7b2;
+}
+
+@media only screen and (min-width: 890px)
+{
+    #email:focus, #pass:focus, #username:focus
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+}
+
+@media only screen and (max-width: 889px)
+{
+    #username:focus
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+
+    #username:focus ~ input
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+
+    #email:focus
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+
+    #email:focus ~ #pass
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+
+    #pass:focus
+    {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+}
+
+.no-bullets ul
+{
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+div.submitArea
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-top: 78px;
+}
+
+input.submitBtn
+{
+    border:none;
+    border-radius: 44px;
+    background-color:#54bdd6;
+    max-width: 10rem;
+    font-size: 16px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 7px 50px;
+    cursor: pointer;
+    color: white;
+}
